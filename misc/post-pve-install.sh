@@ -3,7 +3,7 @@
 # Copyright (c) 2021-2024 tteck
 # Author: tteck (tteckster)
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# run inside proxmox shell with: bash -c "$(curl -fsSL https://raw.githubusercontent.com/SiniousMaximus/Proxmox/refs/heads/main/misc/post-pve-install.sh)"
 
 header_info() {
   clear
