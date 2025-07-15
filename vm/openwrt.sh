@@ -6,6 +6,7 @@
 # License: MIT
 # https://github.com/tteck/Proxmox/raw/main/LICENSE
 # Based on work from https://i12bretro.github.io/tutorials/0405.html
+# Run in Proxmox with: bash -c "$(curl -fsSL https://raw.githubusercontent.com/SiniousMaximus/Proxmox/refs/heads/main/vm/openwrt.sh)"
 
 function header_info {
   clear
@@ -157,7 +158,7 @@ function msg_error() {
 }
 
 function pve_check() {
-  if ! pveversion | grep -Eq "pve-manager/8.[1-3]"; then
+  if ! pveversion | grep -Eq "pve-manager/8\.[1-3](\.[0-9]+)*(/.*)?"; then
     msg_error "This version of Proxmox Virtual Environment is not supported"
     echo -e "Requires Proxmox Virtual Environment Version 8.1 or later."
     echo -e "Exiting..."
